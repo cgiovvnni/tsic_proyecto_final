@@ -1,0 +1,3 @@
+usuario:root
+base: gamingbox
+sin contraseña
