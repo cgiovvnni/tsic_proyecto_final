@@ -1,8 +1,8 @@
 <?php
 $bd_connection = mysqli_connect(
-  'localhost',
-  'root',
-  '',
+  'mysql',
+  'giovanni',
+  'admin',
   'gamingbox'
 ) or die(mysqli_erro($mysqli));
 ?>
@@ -99,7 +99,7 @@ $bd_connection = mysqli_connect(
                 $image = $_REQUEST["image"];
 
                 //Preparamos la orden SQL
-                $consulta = "INSERT INTO VIDEOJUEGOS
+                $consulta = "INSERT INTO videojuegos
                 (nombre,precio,inventario,categoria,imagen,created_at) VALUES ('$name','$price','$inventory','$category','$image',current_timestamp())";
 
                 if(mysqli_query($bd_connection, $consulta)){

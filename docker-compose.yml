@@ -6,7 +6,7 @@ services:
     container_name: tsic-mysql
     environment:
       MYSQL_DATABASE: gamingbox
-      MYSQL_USER: root
+      MYSQL_USER: giovanni
       MYSQL_PASSWORD: admin
       MYSQL_ROOT_PASSWORD: admin
     ports:
@@ -14,7 +14,7 @@ services:
     restart: always
     
   web:
-    image: cgiovannimg/tsic_cgmg
+    image: cgiovannimg/tsic_cgmg:v1
     container_name: tsic-php
     ports:
       - "80:80"

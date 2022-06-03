@@ -3,7 +3,7 @@ session_start();
 
 $bd_connection = mysqli_connect(
   'mysql',
-  'root',
+  'giovanni',
   'admin',
   'gamingbox'
 ) or die(mysqli_erro($mysqli));

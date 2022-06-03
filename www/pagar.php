@@ -94,7 +94,7 @@ include("db.php");
                 $cvc = $_REQUEST["cvc"];
 
                 //Preparamos la orden SQL
-                $consulta = "INSERT INTO TARJETAS
+                $consulta = "INSERT INTO tarjetas
                 (nombre,mes,año,tarjeta,cvc,created_at) VALUES ('$name','$mes','$año','$tarjeta','$cvc',current_timestamp())";
 
                 if(mysqli_query($bd_connection, $consulta)){

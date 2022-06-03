@@ -201,7 +201,7 @@ if (isset($_GET["action"])){
                         <?php
                     }
 
-					$query = "INSERT INTO VENTAS (id_videojuego,nombre,cantidad,precio,created_at) VALUES (1,'$name','$cantidad','$precio',current_timestamp())";
+					$query = "INSERT INTO ventas (id_videojuego,nombre,cantidad,precio,created_at) VALUES (1,'$name','$cantidad','$precio',current_timestamp())";
 					
 					if(mysqli_query($bd_connection, $query)){
                     echo "<h3>Se ha agregado el producto de manera exitosa.</h3>"; 
@@ -221,7 +221,7 @@ if (isset($_GET["action"])){
                 <a name="seccion-ps"></a> 
                 <h1> Lo mejor de PlayStation! </h1>
                 <div id="containerItems">
-                    <?php $query = "SELECT * FROM VIDEOJUEGOS WHERE categoria = 'ps5'";
+                    <?php $query = "SELECT * FROM videojuegos WHERE categoria = 'ps5'";
                     $result = mysqli_query($bd_connection, $query);
                     while($row = mysqli_fetch_array($result)){  ?>
 
@@ -250,7 +250,7 @@ if (isset($_GET["action"])){
                 <a name="seccion-xbox"></a> 
                 <h1> Lo mejor de Xbox! </h1>
                 <div id="containerItems">
-                    <?php $query = "SELECT * FROM VIDEOJUEGOS WHERE categoria = 'xbox'";
+                    <?php $query = "SELECT * FROM videojuegos WHERE categoria = 'xbox'";
                     $result = mysqli_query($bd_connection, $query);
                     while($row = mysqli_fetch_array($result)){  ?>
 
@@ -279,7 +279,7 @@ if (isset($_GET["action"])){
                 <a name="seccion-acc"></a> 
                 <h1> Accesorios, tarjetas de regalo y colecionables! </h1>
                 <div id="containerItems">
-                    <?php $query = "SELECT * FROM VIDEOJUEGOS WHERE categoria = 'accesorios'";
+                    <?php $query = "SELECT * FROM videojuegos WHERE categoria = 'accesorios'";
                     $result = mysqli_query($bd_connection, $query);
                     while($row = mysqli_fetch_array($result)){  ?>
                     
